@@ -23,12 +23,14 @@ Voor het maken van het model is gebruikgemaakt van de Unity engine en de ML-agen
     - `OnEpisodeBegin()`: Positioneert de agent terug naar de startlocatie na een val en plaatst het doelobject op een random locatie
     - `CollectObservation()`: Beperkt zich tot het doorgeven van de status die aangeeft of de eerste fase is voltooid.
     - `OnActionReceived()`: Regelt de bewegingsvectoren en de beloningen
+   
       Per iteratie is er een aanhoudende straf van (-1f / maxSteps)
       Belongingen bestaan uit 3 stappen:
         - Richting het doelobject gaan geeft (0.001f \* (1.0f / distanceToTarget))
         - Het bereiken van het doelobject geeft een beloning van +0.5f
         - Wanner de agent op de GreenZone komt krijgt hij een beloning van +1f
-          Het vallen van het platform geeft -1f
+    
+      Het vallen van het platform geeft -1f
     - `Heuristic()`: Maakt het mogelijk om handmatig te testen
 
 ## Resultaten
