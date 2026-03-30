@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1773761212",
+        "python_version": "3.9.25 (main, Nov  3 2025, 22:44:01) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\lowie\\anaconda3\\envs\\MLAgent\\Scripts\\mlagents-learn config/CubeAgent.yaml --run-id=ObelixcUBEAgent --force",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1773761221"
+    },
+    "total": 8.864715,
+    "count": 1,
+    "self": 0.006437000000001802,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10353149999999989,
+            "count": 1,
+            "self": 0.10353149999999989
+        },
+        "TrainerController.start_learning": {
+            "total": 8.7547465,
+            "count": 1,
+            "self": 0.00010080000000023404,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 8.754633,
+                    "count": 1,
+                    "self": 8.754633
+                },
+                "TrainerController._save_models": {
+                    "total": 1.2699999999199463e-05,
+                    "count": 1,
+                    "self": 1.2699999999199463e-05
+                }
+            }
+        }
+    }
+}
