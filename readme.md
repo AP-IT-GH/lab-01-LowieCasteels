@@ -95,3 +95,42 @@ Volgens mij zou dit kunnen komen doordat er te veel informatie was en kreeg dit 
 Na het training van de Agent was het weer duidelijk dat het kiezen van goede beloningen enorm belangrijk is.
 Het toevoegen van de Ray Perception Sensors was niet eenvoudig en zorgde voor problemen.
 Het kiezen van een goede configuratie is ook belangrijk
+
+# Rapport: Jumper oefening
+
+## Inleiding
+
+De Jumper oefening is een Unity-omgeving ontwikkeld met de ML-Agents toolkit. Het doel is om een agent te trainen die beslist wanneer hij moet springen om inkomende obstakels te ontwijken. Daarnaast worden extra uitdagingen toegevoegt om het voor de agent moeilijker te maken
+
+## Omgeving
+De omgeving bestaat uit een speelveld waarin obstakels op een random interval worden gespawnd en richting de agent bewegen.
+
+**Doel:** De agent moet alle obstakels die afkomen kunnen ontwijken
+**Agents:** De omgeving bevat 1 agent
+**Beloningen:**
+- Succesvolle landing: 0.5f
+- Passeren van obstakel: 1f
+- Botsing met obstakel: -1f
+- Beslissing nemen: -0.001f
+
+## Behaviour parameters
+
+**Vector observation space (3)**
+- Y-as van de agent
+- Afstand tot het dichtsbijzijnde obstakel
+- Snelheid van het dichtsbijzijnde obstakel
+
+**Acties**
+2 mogelijk acties uit 1 discrete tak
+- 0: Niet springe
+- 1: Springen
+
+**Decision Requester**
+- Decision Period ingesteld op 1 voor snelle reactiesnelheid
+
+## Trainingsverloop
+In de eerste training bleef de agent springen. Door een straf te zetten op springen konden we dit afleren.
+Hierdoor begon de agent niet meer te springen omdat de reward van het halen niet genoeg was.
+Tot slot was er het probleem dat de agent in de foute richting stond waardoor hij leerde om pas te springen nadat het obstakel voorbij was.
+
+<img width="1231" height="480" alt="image" src="https://github.com/user-attachments/assets/7d552d3d-e647-457b-980c-0d4802198270" />
